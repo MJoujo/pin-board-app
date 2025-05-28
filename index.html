@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>わからないポイント ピン機能</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>授業ボード</h1>
+            <div class="mode-toggle">
+                <button id="teacher-mode">先生モード</button>
+                <button id="student-mode" class="active">生徒モード</button>
+            </div>
+        </div>
+        
+        <div class="board-container">
+            <!-- 黒板/画像がここに表示されます -->
+            <div id="board" class="board">
+                <img id="board-image" src="images/blackboard.jpg" alt="黒板">
+                <div id="pins-container" class="pins-container"></div>
+            </div>
+        </div>
+        
+        <div class="controls student-controls">
+            <p>わからない部分をタップしてピンを追加できます</p>
+        </div>
+        
+        <div class="controls teacher-controls hidden">
+            <button id="upload-image">黒板画像をアップロード</button>
+            <input type="file" id="image-upload" accept="image/*" style="display:none;">
+            <button id="clear-pins">全てのピンを削除</button>
+            <div class="pin-stats">
+                <p>ピン総数: <span id="pin-count">0</span></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
